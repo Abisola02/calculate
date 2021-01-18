@@ -8,7 +8,7 @@ export default class Calculate extends Component {
             firstNumber: "",
             secondNumber: "",
             addNumbers: "Answer",
-            // initials: ""
+           
         }
     }
     handleChange = (e) => {
@@ -24,12 +24,7 @@ export default class Calculate extends Component {
     handleClick() {
         const add = Number(this.state.firstNumber) + Number(this.state.secondNumber)
         this.setState({ addNumbers: add })
-        //    this.setState((state) =>{
-        //        return {initials: {
-        //            firstNanumber: state.firstNumber,
-        //            secondNumber: state.secondNumber
-        //        }}
-        //    })
+      
 
         this.setState({ firstNumber: "" })
         this.setState({ secondNumber: "" })
@@ -48,7 +43,6 @@ export default class Calculate extends Component {
                         typ="number" value={this.state.secondNumber}
                         onChange={this.handleChange2.bind(this)} />
                     <button onClick={this.handleClick.bind(this)}>Calculate</button>
-                    {/* <p>{this.state.initials && (`${this.state.initials.firstNanumber } + ${this.state.initials.secondNumber}`)}</p> */}
                     <h1>{this.state.addNumbers}</h1>
                 </form>
             </div>
